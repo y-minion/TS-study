@@ -1,0 +1,12 @@
+{
+  "include": ["src"], //컴파일러가 컴파일할 디렉토리 지정
+  "compilerOptions": {
+    //컴파일러가 ts를 js로 컴파일할때 설정할 옵션 지정
+    "target": "ESNext", //컴파일러가 js로 컴파일할 js 버전 정보 기입
+    "module": "ESNext", // js로 컴파일할때 적용할 모듈 시스템 설정
+    "outDir": "dist",
+    "strict": true,
+    "moduleDetection": "force",
+    "skipLibCheck": true
+  }
+}
