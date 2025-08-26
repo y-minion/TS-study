@@ -63,3 +63,13 @@ type Animal4 = {
 interface Dog extends Animal4 {
   breed: string;
 }
+
+//타입 별칭과 달리 인터페이스는 중복 선언으로 머지도 가능하다. 단! 같은 프로퍼티를 중복 선언 할 경우 동일 프로퍼티를 서로 다른 타입으로 정의한다면 오류가 발생한다.
+interface merge {
+  name: string;
+  height: number;
+}
+
+interface merge {
+  weight: string;
+}
