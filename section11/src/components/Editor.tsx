@@ -1,10 +1,11 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { useTodoDispatch } from "../App";
 
-interface EditorProps {
-  onClick: (text: string) => void;
-}
+interface EditorProps {}
 
-export default function Editor({ onClick }: EditorProps) {
+export default function Editor({}: EditorProps) {
+  const dispatch = useTodoDispatch();
+
   const [text, setText] = useState("");
 
   const onChageInput = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -12,7 +13,7 @@ export default function Editor({ onClick }: EditorProps) {
   };
 
   const addTodo = (text: string) => {
-    onClick(text);
+    dispatch.onClickBtn(text);
     setText("");
   };
 
